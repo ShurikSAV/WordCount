@@ -5,10 +5,8 @@
     /// </summary>
     interface IView
     {
-        void Message_output(string message);
-
-        string Text_input(string message);
-        void Message_error_output(string message);
-        string Folder_Select(string message);
+        void MessageOutput(string message);
+        string TextInput(string message);
+        void MessageErrorOutput(string message);
     }
 }

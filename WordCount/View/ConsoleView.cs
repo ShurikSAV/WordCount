@@ -4,28 +4,17 @@ using WordCount.Interface;
 
 namespace WordCount.View
 {
-    class Console_View : IView
+    class ConsoleView : IView
 
     {
-        public string Folder_Select(string message)
-        {
-            Message_output(message);
-            var FolderDialog = new FolderBrowserDialog();
 
-            if (FolderDialog.ShowDialog() != DialogResult.OK || string.IsNullOrWhiteSpace(FolderDialog.SelectedPath))
-            {
-                return string.Empty;
-            }
-            return FolderDialog.SelectedPath;
-        }
 
         /// <summary>
         /// вывод сообщения об ошибке
         /// </summary>
         /// <param name="message">текст сообщения</param>
-        public void Message_error_output(string message)
+        public void MessageErrorOutput(string message)
         {
-
             var background_Color = Console.BackgroundColor;
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
@@ -36,18 +25,19 @@ namespace WordCount.View
         /// вывод сообщения на экран
         /// </summary>
         /// <param name="message">текст сообщения</param>
-        public void Message_output(string message)
+        public void MessageOutput(string message)
         {
             Console.WriteLine(message);
         }
 
+        
         /// <summary>
         /// Запрос пользователя ввести текс
         /// </summary>
         /// <param name="message">текст сообщения</param>
-        public string Text_input(string message)
+        public string TextInput(string message)
         {
-            Message_output(message);
+            MessageOutput(message);
 
             return Console.ReadLine();
         }
