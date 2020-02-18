@@ -12,10 +12,6 @@ namespace WordCount
         public string FolderSelect()
         {
             var FolderDialog = new FolderBrowserDialog();
-#if DEBUG
-            FolderDialog.SelectedPath = @"C:\Work\WordCount\Text";
-#endif
-
 
             if (FolderDialog.ShowDialog() != DialogResult.OK || string.IsNullOrWhiteSpace(FolderDialog.SelectedPath))
             {

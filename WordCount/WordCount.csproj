@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataReader.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="Interface\IFileManager.cs" />
     <Compile Include="Interface\ITextParser.cs" />
